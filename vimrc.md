@@ -17,3 +17,6 @@
 	+ zsh is syntax highlighted
 	+ Auto reload my vimrc
 	+ For programs don't wrap
++ Mapping
+	+ [Text Bubbling](http://vimcasts.org/episodes/bubbling-text/)
++ Let me see the syntax highlighting groups under the cursor
