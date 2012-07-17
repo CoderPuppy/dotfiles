@@ -10,7 +10,7 @@ cd dotfiles
 ## What it includes
 
 See the .md files for information on what each file includes.
-+ vimrc
++ [vimrc](vimrc.md)
 + zshrc
 + bashrc
 + shellrc
