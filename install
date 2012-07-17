@@ -1,0 +1,7 @@
+#!/bin/sh
+
+ln -s `pwd`/vimrc ~/.vimrc
+ln -s `pwd`/zshrc ~/.zshrc
+ln -s `pwd`/bashrc ~/.bashrc
+ln -s `pwd`/shellrc ~/.shellrc
+ln -s `pwd`/aliasesrc ~/.aliasesrc

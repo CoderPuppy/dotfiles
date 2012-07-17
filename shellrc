@@ -1,0 +1,61 @@
+#!/usr/bin/zsh
+
+export PATH="$HOME/bin:$PATH" # Add hub (possibly others) to my path
+
+source ~/.aliasesrc # Add my aliases
+
+###########################
+#          rehash         #
+###########################
+# Rehashes ruby and gems  #
+# then if needed rehashes #
+# auto completion         #
+######################################       ###############
+                                     #       #  Line Docs  #
+function rehash() { ####################################################################
+	rbenv rehash                     # Rehash all the executables associated with ruby #
+	                                 #                                                 #
+	if which hash &> /dev/null; then # If there is a hash command                      #
+		hash -rf                     # Rehash autocompletion                           #
+	fi                               #                                                 #
+} ######################################################################################
+                                     #
+rehash # Rehash everything           #
+                                     #
+# End rehash                         #
+######################################
+export NODE_PATH=/usr/local/lib/node_modules
+
+# function gvim() {
+# 	local instance_running
+# 
+# 	if [[ ${#:-$(pidof gvim)} > 0 ]]; then
+# 		instance_running=0
+# 	else
+# 		instance_running=1
+# 	fi
+# 
+# 	if [[ $instance_running ]]; then
+# 		gvim --
+# }
+
+function gvim() {
+	local gargs length args arg
+
+	gargs=()
+	args=($@)
+	length=${#args}
+
+	while [[ $length > 0 ]]; do
+		arg=$args[1]
+		args=($args[2,-1])
+		length=${#args}
+		gargs=(--remote $arg $gargs)
+	done
+
+	gargs=(--servername gvim $gargs) 
+
+#	echo "gargs: $gargs, args: $@"
+
+	command gvim $gargs &> /dev/null &!
+}
