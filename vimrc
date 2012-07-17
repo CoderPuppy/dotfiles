@@ -8,6 +8,7 @@
 	" Bundles {
 		Bundle 'gmarik/vundle'
 		Bundle 'digitaltoad/vim-jade'
+		Bundle 'tpope/vim-unimpaired'
 		Bundle 'git://git.wincent.com/command-t.git'
 	" }
 	
@@ -28,6 +29,16 @@ if has('autocmd')
 	autocmd BufWritePost {.,_}vimrc source $MYVIMRC
 	autocmd FileType zsh,javascript,bash,sh,coffeescript,java,ruby,python,perl,php set nowrap nolinebreak
 endif
+
+" Mappings {	
+	" Bubbling
+	nmap <C-Up> [e
+	nmap <C-Down> ]e
+
+	" Visual Bubbling
+	vmap <C-Up> [egv
+	vmap <C-Down> ]egv
+" }
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
