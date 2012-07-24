@@ -30,7 +30,7 @@ ZSH_THEME="drewyoung"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git github rails3 rbenv rake ruby gem bundler node npm debian screen)
-plugins=(git github rails3 rbenv rake ruby)
+plugins=(git github rails3 rbenv rake ruby command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
