@@ -8,6 +8,7 @@
 	" Bundles {
 		Bundle 'gmarik/vundle'
 		Bundle 'digitaltoad/vim-jade'
+		Bundle 'kchmck/vim-coffee-script'
 		Bundle 'tpope/vim-unimpaired'
 		Bundle 'git://git.wincent.com/command-t.git'
 	" }
