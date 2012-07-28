@@ -6,3 +6,4 @@ ln -s `pwd`/zshrc ~/.zshrc
 ln -s `pwd`/bashrc ~/.bashrc
 ln -s `pwd`/shellrc ~/.shellrc
 ln -s `pwd`/aliasesrc ~/.aliasesrc
+ln -s `pwd`/tmux.con ~/.tmux.con
