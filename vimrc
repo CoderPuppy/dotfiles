@@ -10,6 +10,10 @@
 		Bundle 'digitaltoad/vim-jade'
 		Bundle 'kchmck/vim-coffee-script'
 		Bundle 'tpope/vim-unimpaired'
+		Bundle 'tpope/vim-fugitive'
+		Bundle 'Lokaltog/vim-powerline'
+		Bundle 'scrooloose/nerdtree'
+		Bundle 'sjbach/lusty'
 		Bundle 'git://git.wincent.com/command-t.git'
 	" }
 	
@@ -17,18 +21,20 @@
 " }
 
 let mapleader=','
-set tabstop=4 " Tabs
+set tabstop=4 shiftwidth=4 " Tabs
 set number " Show line numbers
 set wrap linebreak nolist " Soft Wrap
 set spell
+set hidden
 colorscheme desert
 
 if has('autocmd')
 	autocmd BufNewFile,BufRead *.zsh-theme setfiletype zsh
 	autocmd BufNewFile,BufRead .pryrc,.irbrc setfiletype ruby
 	autocmd FileType zsh set syntax=zsh
-	autocmd BufWritePost {.,_}vimrc source $MYVIMRC
+	" autocmd BufWritePost {.,_}vimrc source $MYVIMRC
 	autocmd FileType zsh,javascript,bash,sh,coffeescript,java,ruby,python,perl,php set nowrap nolinebreak
+	autocmd vimenter * NERDTree | wincmd l
 endif
 
 " Mappings {	
@@ -39,6 +45,14 @@ endif
 	" Visual Bubbling
 	vmap <C-Up> [egv
 	vmap <C-Down> ]egv
+
+	" NERDTree
+	nmap <silent> <leader>n :NERDTreeToggle<cr>
+
+	nmap <silent> <A-Up> :wincmd k<CR>
+	nmap <silent> <A-Down> :wincmd j<CR>
+	nmap <silent> <A-Left> :wincmd h<CR>
+	nmap <silent> <A-Right> :wincmd l<CR>
 " }
 
 " Show syntax highlighting groups for word under cursor
