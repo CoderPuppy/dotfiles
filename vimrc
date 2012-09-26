@@ -34,7 +34,7 @@ if has('autocmd')
 	autocmd FileType zsh set syntax=zsh
 	" autocmd BufWritePost {.,_}vimrc source $MYVIMRC
 	autocmd FileType zsh,javascript,bash,sh,coffeescript,java,ruby,python,perl,php set nowrap nolinebreak
-	autocmd VimEnter * if !argc() | NERDTree | wincmd l | endif
+	autocmd VimEnter * NERDTree | wincmd l
 	autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
 
