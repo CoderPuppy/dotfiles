@@ -14,6 +14,7 @@
 		Bundle 'Lokaltog/vim-powerline'
 		Bundle 'scrooloose/nerdtree'
 		Bundle 'sjbach/lusty'
+		Bundle 'tomtom/tcomment_vim'
 		Bundle 'git://git.wincent.com/command-t.git'
 	" }
 	
@@ -50,10 +51,14 @@ endif
 	" NERDTree
 	nmap <silent> <leader>n :NERDTreeToggle<cr>
 
+	" Switch between panes
 	nmap <silent> <A-Up> :wincmd k<CR>
 	nmap <silent> <A-Down> :wincmd j<CR>
 	nmap <silent> <A-Left> :wincmd h<CR>
 	nmap <silent> <A-Right> :wincmd l<CR>
+
+	" T-Comment
+	map <leader>c <c+_><c+_>
 " }
 
 " Show syntax highlighting groups for word under cursor
