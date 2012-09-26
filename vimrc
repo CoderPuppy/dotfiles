@@ -58,7 +58,7 @@ endif
 	nmap <silent> <A-Right> :wincmd l<CR>
 
 	" T-Comment
-	map <leader>c <c+_><c+_>
+	map <leader>c <c-_><c-_>
 " }
 
 " Show syntax highlighting groups for word under cursor
