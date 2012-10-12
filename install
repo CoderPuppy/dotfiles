@@ -7,3 +7,4 @@ ln -s `pwd`/bashrc ~/.bashrc
 ln -s `pwd`/shellrc ~/.shellrc
 ln -s `pwd`/aliasesrc ~/.aliasesrc
 ln -s `pwd`/tmux.conf ~/.tmux.conf
+ln -s `pwd`/aprc ~/.aprc

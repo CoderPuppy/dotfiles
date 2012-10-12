@@ -1,0 +1,3 @@
+ENV['TERM'] ||= ''
+
+(AwesomePrint.defaults ||= {}).merge! indent: -4, raw: true
